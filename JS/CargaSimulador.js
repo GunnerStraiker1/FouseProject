@@ -21,6 +21,6 @@ function isMobile(){
     );
 }
 
-if (isMobile()){
+if (!isMobile()){
   var gameInstance = UnityLoader.instantiate("gameContainer", "Build/SimuladorCasa_01.json", {onProgress: UnityProgress});
 }
