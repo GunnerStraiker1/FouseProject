@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="../CSS/indexCSS.css">
+    <link rel="stylesheet" type="text/css" href="../CSS/simuladorCSS.css">
+
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script> 
+
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title> Simulador De Casas [Unity] | Modelo Casa</title>
+    <link rel="shortcut icon" href="TemplateData/favicon.ico">
+    <link rel="stylesheet" href="TemplateData/style.css">
+    <script src="TemplateData/UnityProgress.js"></script>  
+    <script src="Build/UnityLoader.js"></script>
+    <script type="text/javascript" src="../JS/indexJs.js"></script>
+    <script type="text/javascript" src="../JS/LoginLogic.js"></script>
+    <script type="text/javascript" src="../JS/CargaSimulador.js"></script>
+
+  </head>
+  <body background="../Recursos/Fondo.jpg">
+
+  <!-- Inicio de la Barra de Navegación Principal -->
+  <nav class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#CuerpoNav">
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>                        
+            </button>
+        <a class="navbar-brand" href="../index.html"><img src="../Recursos/Logo.png"></a>
+      </div>
+      <div id="CuerpoNav" class="collapse navbar-collapse">
+        <ul class="nav navbar-nav">
+          <li id="ItemNav"><a href="../index.html">Inicio</a></li>
+          <li id="ItemNav" class="active"><a href="SimuladorCasa_1.html">Simulador</a></li>
+          <li id="ItemNav"><a href="#">Archivo</a></li>
+          <li id="ItemNav"><a href="#">Contacto</a></li>
+          <li id="ItemNav"><a href="#">Servicios</a></li>
+        </ul>
+        <ul class="nav navbar-nav navbar-right">
+          <li><a href="#" data-toggle="modal" data-target="#modalRegistrarUsuario" id="BotonNav"><span class="glyphicon glyphicon-user"></span> Registrarse</a></li>
+              <li><a href="#" data-toggle="modal" data-target="#modalIniciarSesión" id="BotonNav2"><span class="glyphicon glyphicon-log-in"></span> Iniciar Sesión</a></li>
+              <li><a href="#" data-toggle="modal" data-target="#ModalBuscador"><span class="glyphicon glyphicon-search"></span> Buscador </a></li>
+          </ul>
+      </div>
+    </div>
+  </nav>
+  <!-- Fin de la Barra de Navegación Principal -->
+
+  <!-- Inicio del Simulador -->
+    <div class="container-fluid" id="PanelSimulador">
+      <div class="row">
+        <div class="col-sm-7" id="ObjetoSimulador">
+          <div class="panel panel-dafault" >
+            <div class="panel-heading" id="CabeceraSimulador">
+              <h4>Simulador: Casa Familiar</h4>
+            </div>
+            <div class="panel-body" id="VentanaSimuladorUnity">
+              <div id="CuerpoSimulador">
+                <div id="gameContainer"></div>
+              </div>
+            </div>
+            <div class="panel-footer" id="PieSimulador">
+              <input type="button" class="btn btn-default" name="colapsar" id="ColapsarVentanaSimulador" value="Colapsar">
+              <input type="button" class="btn btn-default" name="oscurecer" id="OscurecerPagina" value="Obscurecer">
+              <input type="button" class="btn btn-default" name="reportar" id="ReportarModelo" value="Reportar">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div> 
+    <!-- Fin del Simulador -->
+
+    <!-- Inicio Panel Información General -->
+    <div class="container-fluid">
+      <div  id="PanelInformacion">
+          <div class="panel panel-default">
+            <div class="panel-heading" id="CabeceraSimulador">
+              <h4>Información General</h4>
+            </div>
+            <div class="panel-body" id="VentanaSimuladorUnity">
+              <div id="CuerpoSimulador2">
+                <p>
+                  Este modelo estandar presenta diversas variedades en su diseño, incrementando la comodidad
+                  de los usuarios que la han adquirido y habitado.
+                  <br>
+                  <br>
+                  Presenta las siguientes caracteristicas:
+                  <br>
+                  <div class="table-responsive">
+                    <table class="table table-bordered">
+                      <thead>
+                        <tr>
+                          <th>Tipo Cuarto</th>
+                          <th>Descripción</th>
+                        </tr>
+                      </thead>
+                      <tr>
+                        <td>Dormitorio(s)</td>
+                        <td>
+                          Cuenta con dos habitaciones personales. Multiples muebles pueden comodarse libremente. Cuenta con ventanas propias. Tiene iluminación propia, baño integrado y vista al mar.
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>Cocina</td>
+                        <td>
+                          El hogar cuenta con un espacio suficiente para albergar la cocina. Cuenta con un lavatrastes integrados, el cual cuenta con agua potable y purificada. Tiene su porpia iluminación, y conductos para los tanques de gas.
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>Comedor</td>
+                        <td>
+                          El hogar cuenta un gran espacio para almacenar un comedor familiar. Tiene iluminación propia, ventanas, y un sistema de refirgeración. 
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>Sala de Estar</td>
+                        <td>
+                          Pues es solo una sala dude. Puede almacenarse un juego de piezas de sofas, piano, libreros, televiciones, etc.
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>Jardín</td>
+                        <td>
+                          El hogar cuenta con su propio jardin externo. Es pequeño, pero suficiente para albergar diversas plantas, y hasta un arbol.
+                        </td>
+                      </tr>
+                    </table> 
+                  </div>
+                  
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+    </div>
+
+    <!-- Inicio Panel Información Especifica -->
+
+    <div class="container-fluid" id="PanelInformacion">
+      <div class="panel panel-dafault">
+        <div class="panel-heading" id="CabeceraSimulador">
+          <h4>Información Especifica</h4>
+        </div>
+        <div class="panel-body">
+          
+        </div>
+
+        <div class="panel-footer" id="PieSimulador">
+          <center>
+            <ul class="pagination pagination-sm" id="PaginacionInformacion">
+              <li><a id="Pagina1">1</a></li>
+              <li><a id="Pagina2">2</a></li>
+              <li><a id="Pagina2">3</a></li>
+              <li><a id="Pagina3">4</a></li>
+              <li><a id="Pagina4">5</a></li>
+            </ul>
+          </center>
+        </div> 
+      </div>
+    </div>
+
+
+    <!-- TALON DE PAGINA-->
+    <div class="container-fluid">
+
+      
+    </div>
+
+
+    <!-- Modal de Iniciar Sesión -->
+    <div class="modal fade" id="modalIniciarSesión" role="dialog">
+      <div class="modal-dialog modal-sm">
+        <div class="modal-content">
+          <!-- Modal Header -->
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal">&times;</button>
+                  <center><h4 class="modal-title">Iniciar Sesión</h4></center>
+            </div>
+            <!-- Modal Body -->
+            <div class="modal-body">
+              <!-- Formulario Registrar Usuario -->
+          <form  action="registrarUsuario.php" method="post" onsubmit="return validarClave(this);">
+            <div class="form-group">
+              <label for="email">Correo Electronico:</label>
+              <input type="email" class="form-control" placeholder="Ingrese Correo" id="email3">
+            </div>
+            <div class="form-group">
+              <label for="pwd">Contraseña:</label>
+              <input type="password"  name ="pwd" class="form-control" placeholder="Ingrese Contraseña" id="pwd3">
+              <div id="AlertaClave3" class="alert alert-danger">
+                Ingresa una Contraseña valida.
+              </div>
+            </div>
+            <div class="checkbox">
+              <label><input type="checkbox"> Recordar Datos</label>
+            </div>
+            <div>
+              <Input type="submit" class="btn btn-default" value="Ingresar" id="BotonIngresar">
+            </div>
+            
+          </form> 
+
+            </div>
+        <!-- Modal Footer -->
+            <div class="modal-footer">
+              <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Modal de Registrar Usuario -->
+    <div class="modal fade" id="modalRegistrarUsuario" role="dialog">
+      <div class="modal-dialog modal-sm">
+        <div class="modal-content">
+          <!-- Modal Header -->
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal">&times;</button>
+                  <center><h4 class="modal-title">Registrarse</h4></center>
+            </div>
+
+            <!-- Modal Body -->
+            <div class="modal-body">
+              <!-- Formulario Para Ingresar Al Sistema -->
+              <form action="registrarUsuario.php" method="post" onsubmit="return validarRegistro(this);">
+            <div class="form-group">
+              <label for="email">Correo Electronico:</label>
+              <input type="email" name="email" class="form-control" placeholder="correo@example.com" id="email">
+              <div class="alert alert-danger" id="AlertaCorreo">
+                ¡Los correos no coinciden!
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="email">Repetir Correo Electronico:</label>
+              <input type="email" class="form-control" placeholder="correo@example.com" id="email2">
+              <div class="alert alert-danger" id="AlertaCorreo2">
+                ¡Los correos no coinciden!
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="pwd">Nueva Contraseña:</label>
+              <input type="password" class="form-control" placeholder="Contraseña de 6 a 16 caracteres" id="pwd" name="pwd">
+              <div class="alert alert-danger" id="AlertaClave">
+                ¡Las contraseñas no coinciden!
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="pwd">Repetir Contraseña:</label>
+              <input type="password" class="form-control" placeholder="Contraseña de 6 a 16 caracteres" id="pwd2" name="pwd2">
+              <div class="alert alert-danger" id="AlertaClave2">
+                ¡Las contraseñas no coinciden!
+              </div>
+            </div>
+            <div>
+              <Input type="submit" class="btn btn-default" value="Registrar" id="BotonRegistrar">
+            </div>
+            
+          </form>
+
+            </div>
+
+            <!-- Modal Footer -->
+            <div class="modal-footer">
+              <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Inicio Modal Buscador-->
+    <div class="container">
+      <div class="modal fade" id="ModalBuscador">
+      <div class="modal-dialog">
+        <div class="modal-content">
+        
+          <!-- Modal Header -->
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal">&times;</button>
+            <h4 class="modal-title">Buscador</h4>
+          </div>
+          
+          <!-- Modal body -->
+          <div class="modal-body">
+            <!-- Formulario para realizar consultas -->
+        <form  action="/action_page.php">
+          <div class="form-group">
+            <input type="text" class="form-control" placeholder="Buscador de Casas">
+          </div>
+          <div align="right">
+            <button type="submit" class="btn btn-default"><i class="glyphicon glyphicon-search"></i></button>
+          </div>
+        </form>
+          </div>
+        </div>
+      </div>
+      </div>
+    </div>
+  <!-- Fin del modal Buscador -->
+  </body>
+</html>

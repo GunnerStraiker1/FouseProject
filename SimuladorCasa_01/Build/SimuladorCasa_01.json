@@ -1,0 +1,13 @@
+{
+"companyName": "DefaultCompany",
+"productName": "ModeloCasa",
+"dataUrl": "SimuladorCasa_01.data.unityweb",
+"asmCodeUrl": "SimuladorCasa_01.asm.code.unityweb",
+"asmMemoryUrl": "SimuladorCasa_01.asm.memory.unityweb",
+"asmFrameworkUrl": "SimuladorCasa_01.asm.framework.unityweb",
+"TOTAL_MEMORY": 268435456,
+"graphicsAPI": ["WebGL 2.0", "WebGL 1.0"],
+"webglContextAttributes": {"preserveDrawingBuffer": false},
+"splashScreenStyle": "Dark",
+"backgroundColor": "#231F20"
+}

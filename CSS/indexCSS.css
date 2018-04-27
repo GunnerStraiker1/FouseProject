@@ -1,0 +1,87 @@
+.nav{
+	height: 50px;
+}
+
+#CuerpoNav{
+	padding-top: 10px;
+	padding-bottom: 10px;
+}
+
+#Carrusel {
+	background-color: #000;
+	margin-top: 50px;
+}
+
+
+
+#navegarModelos {
+	background-image: url('../Recursos/navegarModelos.jpg');
+	height: 400px;
+	padding-right: 0px;
+	padding-left: 0px;
+}
+
+#navegarSimulador {
+	background-image: url('../Recursos/navegarSimulador.jpg');
+	height: 400px;
+	padding-right: 0px;
+	padding-left: 0px;
+}
+
+#Pad20{
+	margin: 20px;
+}
+#Pad25{
+	margin: 23px;
+}
+
+#Right{
+	float: right;
+}
+
+#PadLeft{
+	float: left;
+	width: 80%;
+}
+
+#PadRigth{
+	float: right;
+	width: 30%;
+}
+
+@media (max-width: 991px) {
+  .navbar-header {
+      float: none;
+  }
+  .navbar-left,.navbar-right {
+      float: none !important;
+  }
+  .navbar-toggle {
+      display: block;
+  }
+  .navbar-collapse {
+      border-top: 1px solid transparent;
+      box-shadow: inset 0 1px 0 rgba(255,255,255,0.1);
+  }
+  .navbar-fixed-top {
+      top: 0;
+      border-width: 0 0 1px;
+  }
+  .navbar-collapse.collapse {
+      display: none!important;
+  }
+  .navbar-nav {
+      float: none!important;
+      margin-top: 7.5px;
+  }
+  .navbar-nav>li {
+      float: none;
+  }
+  .navbar-nav>li>a {
+      padding-top: 10px;
+      padding-bottom: 10px;
+  }
+  .collapse.in{
+      display:block !important;
+  }
+}
