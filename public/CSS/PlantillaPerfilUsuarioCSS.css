@@ -1,0 +1,24 @@
+#ContenedorPerfilUsuario{
+	margin-top: 80px;
+}
+
+#PanelTop{
+	height: auto;
+}
+
+#ImagenPerfil{
+	width: 120px;
+	height: 120px;
+}
+
+#ContenedorFotoPerfil{
+	margin-right: 20px;
+}
+
+#ContendorInformaciónGeneralPerfil{
+	
+}
+
+#PanelPresentacion{
+	margin-bottom: 10px;
+}
